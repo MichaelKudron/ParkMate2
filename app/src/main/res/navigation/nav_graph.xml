@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startSessionFragment">
+
+    <fragment
+        android:id="@+id/startSessionFragment"
+        android:name="com.parkmate.ui.startsession.StartSessionFragment"
+        android:label="Start Session">
+        <action
+            android:id="@+id/action_startSession_to_activeSession"
+            app:destination="@id/activeSessionFragment"
+            app:popUpTo="@id/startSessionFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/activeSessionFragment"
+        android:name="com.parkmate.ui.activesession.ActiveSessionFragment"
+        android:label="Active Session">
+        <action
+            android:id="@+id/action_activeSession_to_history"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_activeSession_to_startSession"
+            app:destination="@id/startSessionFragment"
+            app:popUpTo="@id/startSessionFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.parkmate.ui.history.HistoryFragment"
+        android:label="History">
+        <action
+            android:id="@+id/action_history_to_sessionDetails"
+            app:destination="@id/sessionDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionDetailsFragment"
+        android:name="com.parkmate.ui.sessiondetails.SessionDetailsFragment"
+        android:label="Session Details">
+        <argument
+            android:name="sessionId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.parkmate.ui.settings.SettingsFragment"
+        android:label="Settings" />
+
+</navigation>
