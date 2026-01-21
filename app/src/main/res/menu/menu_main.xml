@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/startSessionFragment"
+        android:icon="@drawable/ic_add"
+        android:title="Start" />
+
+    <item
+        android:id="@+id/activeSessionFragment"
+        android:icon="@drawable/ic_car"
+        android:title="Active" />
+
+    <item
+        android:id="@+id/historyFragment"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+</menu>
